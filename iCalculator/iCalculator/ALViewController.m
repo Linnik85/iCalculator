@@ -34,26 +34,20 @@ BOOL yFlag;
 - (IBAction)clear:(id)sender {
     
     x = 0;
-    y = 0;
     
-    enterFlag = NO;
-    yFlag = NO;
     [self calcScreen];
     
 }
 
 - (IBAction)clearAll:(id)sender {
     
-    if (enterFlag) {
-        
-        y = x;
-        x = 0;
-        enterFlag = NO;
-    }
+    x = 0;
+    y = 0;
     
-    x = (10.0f * x) + [sender tag];
-    
+    enterFlag = NO;
+    yFlag = NO;
     [self calcScreen];
+    
 }
 
 - (IBAction)digit:(id)sender {
